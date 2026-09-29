@@ -1,6 +1,6 @@
 # Roadmap für die Framework-Entwicklung
 
-Diese Roadmap übernimmt die Phasennamen des ITP. Jedes Paket ist auf eine Arbeitssitzung begrenzt und endet mit einem überprüfbaren Artefakt. Phase I.1 ist laut Autoren- und KI-Bericht abgeschlossen; der nächste inhaltliche Schritt ist I.2. Die Reihenfolge ab dort ist ein Vorschlag zur Bearbeitung, kein im ITP bestätigter Projektplan.
+Diese Roadmap übernimmt die Phasennamen des ITP. Jedes Paket ist auf eine Arbeitssitzung begrenzt und endet mit einem überprüfbaren Artefakt. Der dokumentierte Durchlauf von I.1 ist laut Autoren- und KI-Bericht abgeschlossen; seine Spezifikation und Erfassungsvorlage wurden in Review #3 stabilisiert. Der nächste inhaltliche Schritt ist I.2. Die Reihenfolge ab dort ist ein Vorschlag zur Bearbeitung, kein im ITP bestätigter Projektplan.
 
 | Paket | Phase / Fokus | Sitzungsergebnis | Abnahmekriterium |
 | --- | --- | --- | --- |

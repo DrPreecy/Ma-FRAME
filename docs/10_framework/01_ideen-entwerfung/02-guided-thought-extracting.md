@@ -32,8 +32,8 @@ Bei der Aussage „das Produkt muss frei sein“ fragt der Gesprächspartner: �
 ## Offene Punkte
 
 - > [OFFEN: OF-001 – Ein nutzerbestimmtes Ende und ausreichende Tiefe für I.2 definieren.]
-- > [OFFEN: OF-002 – Verhältnis von I.2, I.3 und der Bezeichnung Phase I klären.]
 - > [OFFEN: OF-003 – GUFP-Grundprinzip und Phase-II-Methode eindeutig benennen.]
+- Die Benennung von Phase, Schritten und Syntheseschritt wurde mit OF-002 vereinheitlicht.
 
 ## Status
 

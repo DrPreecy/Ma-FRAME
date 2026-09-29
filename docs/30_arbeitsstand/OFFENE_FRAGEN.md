@@ -5,7 +5,6 @@ Offene Fragen sind entscheidbare Klärungspunkte, keine stillschweigenden Fehler
 | ID | Frage | Phase/Baustein | Status | Nächster Klärungsschritt |
 | --- | --- | --- | --- | --- |
 | OF-001 | Woran erkennt der Nutzer das Ende von Guided thought extracting, und welche Kriterien machen das Ideen-Produktprofil vollständig genug, ohne Vollständigkeit zu erzwingen? | I – Ideen Entwerfung | Offen | Sokratische Sitzung mit konkreten Stop-/Ergebnisbeispielen. |
-| OF-002 | Wie werden I.1/I.2, „Ideen Entwerfung“ und die Abschlussbezeichnung der Phase konsistent benannt? | I – Ideen Entwerfung | Offen | Begriffe und Gate-Beziehungen anhand eines Beispiels abgleichen. |
 | OF-003 | Wie werden „Gesunder, unvoreingenommener, freier Prozess“ und die vier Schritte Get/Understand/Form/Prove unterschieden oder neu benannt? | I–II – GUFP | Offen | Autorentscheidung dokumentieren; jede Verwendung im Glossar zuordnen. |
 | OF-004 | Welche Bedeutung haben `x`, `y`, `z` und `x = y` über die Formeln hinweg, und wie wird Rückverfolgbarkeit praktisch belegt? | I–II – Input/Validierung | Offen | Variableninventar und zwei durchgehende Beispiele erstellen. |
 | OF-005 | Was ist das verbindliche Eintritts-/Austritts-Gate zwischen Phase III Pre-Production und Phase IV Produktion? | III–IV | Offen | Blueprint-Freigabe, Kriterien und Ausnahme-/Rückweg definieren. |
@@ -21,4 +20,6 @@ Offene Fragen sind entscheidbare Klärungspunkte, keine stillschweigenden Fehler
 
 ## Geschlossene Fragen
 
-Noch keine.
+| ID | Ergebnis | Freigabe | Verweise |
+| --- | --- | --- | --- |
+| OF-002 | „I – Ideen Entwerfung“ bezeichnet die Phase. „I.1 – Offload your Context“ und „I.2 – Guided thought extracting“ sind ihre nummerierten Schritte. Das Ideen-Produktprofil ist der anschließende, im ITP nicht nummerierte Syntheseschritt. Der Abschluss eines I.1-Durchlaufs schließt weder Phase I noch das Framework ab. | Review #3, 2026-09-29 | `docs/00_quellen/itp.md`, `docs/10_framework/01_ideen-entwerfung/01-offload-your-context.md` |

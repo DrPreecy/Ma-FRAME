@@ -13,7 +13,7 @@ Das Repository enthielt drei unveränderte DOCX-Quelldokumente und eine README o
 
 Die Quellen werden in `docs/00_quellen/` extrahiert und analysiert. Die lebende Spezifikation liegt in `docs/10_framework/` mit einem eigenen Phasenordner für jede ITP-Phase I–VII. Entscheidungen, Arbeitsstand und Vorlagen liegen getrennt in `docs/20_entscheidungen/`, `docs/30_arbeitsstand/` und `docs/40_vorlagen/`; README und Contribution Guide erklären, dass dies Repository-Artefakte und keine zusätzlichen Framework-Phasen sind.
 
-Phasenbezeichnungen folgen der ITP-Fassung. Phase VI und VII werden vorerst als nummerierte Querschnittsphasen beibehalten, bis ihre Einordnung geklärt ist. Der Arbeitsstand nennt Phase I.1 „Offload your Context“ abgeschlossen und I.2 „Guided thought extracting“ als nächsten Schritt.
+Phasenbezeichnungen folgen der ITP-Fassung. Phase VI und VII werden vorerst als nummerierte Querschnittsphasen beibehalten, bis ihre Einordnung geklärt ist. Der Arbeitsstand nennt den dokumentierten Durchlauf von Schritt I.1 „Offload your Context“ abgeschlossen und I.2 „Guided thought extracting“ als nächsten Schritt.
 
 ## Erwogene Optionen
 
