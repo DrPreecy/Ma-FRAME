@@ -31,6 +31,10 @@ def element_text(element: ElementTree.Element) -> str:
     return "".join(parts)
 
 
+def markdown_text(element: ElementTree.Element) -> str:
+    return "\n".join(line.rstrip(" \t") for line in element_text(element).split("\n"))
+
+
 def body_blocks(document_xml: bytes) -> list[str]:
     root = ElementTree.fromstring(document_xml)
     body = root.find("w:body", NS)
@@ -40,7 +44,7 @@ def body_blocks(document_xml: bytes) -> list[str]:
     blocks: list[str] = []
     for child in body:
         if child.tag == f"{{{WORD_NS}}}p":
-            text = element_text(child)
+            text = markdown_text(child)
             if text:
                 blocks.append(text)
         elif child.tag == f"{{{WORD_NS}}}tbl":
@@ -48,7 +52,7 @@ def body_blocks(document_xml: bytes) -> list[str]:
                 cells = []
                 for cell in row.findall("w:tc", NS):
                     paragraphs = [
-                        element_text(paragraph)
+                        markdown_text(paragraph)
                         for paragraph in cell.findall("w:p", NS)
                     ]
                     cells.append("\n".join(paragraphs))

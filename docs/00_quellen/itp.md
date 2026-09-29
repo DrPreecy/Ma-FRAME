@@ -3,7 +3,7 @@
 Die folgende Fassung erhält den lesbaren Text in Dokumentreihenfolge. Word-Formatierung ist nicht enthalten.
 
 ```text
- Marlons Framework 
+ Marlons Framework
 
 Kernablauf
 
@@ -307,13 +307,13 @@ Das Drei-Staaten-Modell
 
 1. Der überregulierte Staat (Die Diktatur der Messbarkeit):
 
-Alles wird im Namen eines scheinbaren Gesamtwohls reglementiert. Jeder freie Gedanke wird vorgeschrieben – wie in '1984'. Gleichzeitig wird vom Individuum Höchstleistung und radikale Innovation verlangt. Der Mensch wird auf reine Umsetzung degradiert. Wer als Systemsklave in solchen starren Corporate-Frameworks arbeitet, erfindet nicht das Rad neu. Er wird höchstens dazu gebracht, das bestehende Rad um 0,1 Sekunden effizienter zu machen. Um aber eine originäre Idee zu finden, die dreifach so gut ist, braucht es den geschützten, unvoreingenommenen Innovationsraum. 
+Alles wird im Namen eines scheinbaren Gesamtwohls reglementiert. Jeder freie Gedanke wird vorgeschrieben – wie in '1984'. Gleichzeitig wird vom Individuum Höchstleistung und radikale Innovation verlangt. Der Mensch wird auf reine Umsetzung degradiert. Wer als Systemsklave in solchen starren Corporate-Frameworks arbeitet, erfindet nicht das Rad neu. Er wird höchstens dazu gebracht, das bestehende Rad um 0,1 Sekunden effizienter zu machen. Um aber eine originäre Idee zu finden, die dreifach so gut ist, braucht es den geschützten, unvoreingenommenen Innovationsraum.
 
 Dabei passt nicht jedes Puzzleteil sofort in jedes Puzzle und nicht jeder Schlüssel in jedes Schloss. Aber aus einem nicht passenden Schlüssel lernt man; man kann ihn anpassen oder daraus das Prinzip des Generalschlüssels entwickeln! Der Mensch ist ein laufendes Über-KI-Modell. Sperrt man ihn in einen Käfig der Überkontrolle, verlernt er das Fliegen – trotzdem verlangt man Kunststücke von ihm. Große Organisationen befragen oft jeden externen Faktor, ignorieren aber den Arbeiter selbst als Ideenquelle. Manipulative Systeme nutzen Algorithmen und Dopaminschleifen, um den Menschen zum reinen Ausführer ('Zombie') zu degradieren. Das Messer sticht nicht sichtbar zu, sondern fühlt sich an wie eine Belohnung. Es entsteht eine toxische Abhängigkeit, in der dem Menschen eingeredet wird, er habe abseits seiner Funktion für das System keinen eigenen Wert.
 
 2. Der absolut freie Staat (Die Illusion grenzenloser Freiheit):
 
-Ein unreguliertes System kümmert sich nicht um das Individuum. Es verkauft Halbwissen und Hype, bietet aber keinerlei Halt oder Schutz. Menschen sind aber keine unendlichen Freiheitssklaven. Man kann einen Menschen nicht einfach in die wilde Natur werfen, ihm totale Freiheit geben und erwarten, dass er aus dem Nichts eine Rakete baut, nur weil er theoretisch die Ressourcen dafür hätte. Der Mensch braucht ein Gedankenmodell, um handlungsfähig zu bleiben. 
+Ein unreguliertes System kümmert sich nicht um das Individuum. Es verkauft Halbwissen und Hype, bietet aber keinerlei Halt oder Schutz. Menschen sind aber keine unendlichen Freiheitssklaven. Man kann einen Menschen nicht einfach in die wilde Natur werfen, ihm totale Freiheit geben und erwarten, dass er aus dem Nichts eine Rakete baut, nur weil er theoretisch die Ressourcen dafür hätte. Der Mensch braucht ein Gedankenmodell, um handlungsfähig zu bleiben.
 
 Das Paradebeispiel der absoluten (aber falschen) Freiheit: Ein 16-Jähriger fragt online, wie man Geld verdient, und ein Verkäufer rät ihm zu teuren Kursen, Automaten und E-Books. Der Käufer wird nicht reich, aber der Verkäufer verdient 12.000 Euro am Verkauf der Altbestände. Ein solches System heuchelt Hilfe vor, kalkuliert das Interesse des Nutzers aber nur als Ertragsfaktor ein. Unendliche Informationsflut führt ohne Struktur in bloße Orientierungslosigkeit (95% des Hypes um Krypto, Trading oder KI-Automatisierung ist inhaltsloser Müll). Da echte Güter und Ressourcen niemals gleich verteilt sind, führt die Abwesenheit von Regeln stets dazu, dass der Stärkere den Schwächeren ausbeutet.
 
