@@ -16,6 +16,26 @@ REQUIRED_SECTIONS = (
     "Offene Punkte",
     "Status",
 )
+EXPECTED_PHASES = (
+    "01_ideen-entwerfung",
+    "02_ideen-entwicklung",
+    "03_idee-zu-produktion",
+    "04_produktion",
+    "05_launch-after-launch",
+    "06_execution-regeln",
+    "07_systemlogik-philosophie",
+)
+REQUIRED_FILES = (
+    "docs/10_framework/00_ueberblick.md",
+    "docs/10_framework/10_prinzipien.md",
+    "docs/10_framework/30_glossar.md",
+    "docs/20_entscheidungen/0000-template.md",
+    "docs/30_arbeitsstand/CHANGELOG.md",
+    "docs/30_arbeitsstand/OFFENE_FRAGEN.md",
+    "docs/30_arbeitsstand/ROADMAP.md",
+    "docs/40_vorlagen/agenten-uebergabe.md",
+    "docs/40_vorlagen/baustein.md",
+)
 VALID_STATUSES = {"Entwurf", "In Arbeit", "Stabil"}
 MARKER_START = re.compile(r"\[OFFEN:")
 MARKER = re.compile(r"\[OFFEN:\s*(OF-\d{3})\b[^\]]*\]")
@@ -26,19 +46,37 @@ STATUS = re.compile(r"^Status:\s*(.*?)\s*$", re.MULTILINE)
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
     framework = root / "docs/10_framework"
-    components = sorted(
-        path
+    components: list[Path] = []
+    for phase_name in EXPECTED_PHASES:
+        phase = framework / phase_name
+        if not phase.is_dir():
+            errors.append(f"{phase}: erwarteter Phasenordner fehlt")
+            continue
+        phase_components = sorted(phase.glob("*.md"))
+        if not phase_components:
+            errors.append(f"{phase}: keine Markdown-Komponente gefunden")
+        components.extend(phase_components)
+
+    expected_phase_paths = {framework / name for name in EXPECTED_PHASES}
+    unexpected_phases = sorted(
+        phase
         for phase in framework.glob("[0-9][0-9]_*")
-        if phase.is_dir()
-        for path in phase.glob("*.md")
+        if phase.is_dir() and phase not in expected_phase_paths
     )
-    if not components:
-        return [f"{framework}: keine Komponenten in den Phasenordnern gefunden"]
+    for phase in unexpected_phases:
+        errors.append(f"{phase}: unerwarteter Phasenordner")
+
+    for relative_path in REQUIRED_FILES:
+        path = root / relative_path
+        if not path.is_file():
+            errors.append(f"{path}: erforderliche Repository-Datei fehlt")
 
     questions_path = root / "docs/30_arbeitsstand/OFFENE_FRAGEN.md"
-    if not questions_path.is_file():
-        return [f"{questions_path}: Fragen-Backlog fehlt"]
-    question_ids = set(QUESTION_ID.findall(questions_path.read_text(encoding="utf-8")))
+    question_ids = (
+        set(QUESTION_ID.findall(questions_path.read_text(encoding="utf-8")))
+        if questions_path.is_file()
+        else None
+    )
 
     for component in components:
         content = component.read_text(encoding="utf-8")
@@ -60,10 +98,11 @@ def validate(root: Path) -> list[str]:
                 f"{component}: jeder [OFFEN: ...]-Marker muss geschlossen sein "
                 "und eine OF-nnn-ID enthalten"
             )
-        for question_id in sorted(set(markers) - question_ids):
-            errors.append(
-                f"{component}: {question_id} fehlt in {questions_path}"
-            )
+        if question_ids is not None:
+            for question_id in sorted(set(markers) - question_ids):
+                errors.append(
+                    f"{component}: {question_id} fehlt in {questions_path}"
+                )
 
     return errors
 

@@ -22,7 +22,7 @@ Die Struktur unterscheidet außerdem **Arbeitsartefakte** von **Framework-Phasen
 
 Der Autorenbericht und der KI-Tätigkeitsbericht benennen Phase I.1, **Offload your Context**, als abgeschlossen und Phase I.2, **Guided thought extracting**, als nächsten Schritt. Das ITP skizziert darüber hinaus bereits die Phasen II–VII, weist aber selbst auf fehlenden Realitätsabgleich hin. Diese Repository-Einrichtung ist daher eine erste, quellenbasierte Spezifikation – keine Bestätigung der Wirksamkeit des Modells.
 
-Der konkrete Arbeitsstand und die nächsten Einzelsitzungen stehen in [`docs/30_arbeitsstand/ROADMAP.md`](docs/30_arbeitsstand/ROADMAP.md). Belege, Ableitungen und Widersprüche sind in [`docs/00_quellen/QUELLENANALYSE.md`](docs/00_quellen/QUELLENANALYSE.md) festgehalten; ungeklärte Punkte erhalten IDs in [`docs/30_arbeitsstand/OFFENE_FRAGEN.md`](docs/30_arbeitsstand/OFFENE_FRAGEN.md).
+Der konkrete Arbeitsstand und die nächsten Einzelsitzungen stehen in [`docs/30_arbeitsstand/ROADMAP.md`](docs/30_arbeitsstand/ROADMAP.md). Der [kritische Struktur-Review](docs/30_arbeitsstand/STRUKTUR_REVIEW.md) hält priorisierte Repository-Befunde und ihre Behandlung fest. Belege, Ableitungen und Widersprüche sind in [`docs/00_quellen/QUELLENANALYSE.md`](docs/00_quellen/QUELLENANALYSE.md) festgehalten; ungeklärte Punkte erhalten IDs in [`docs/30_arbeitsstand/OFFENE_FRAGEN.md`](docs/30_arbeitsstand/OFFENE_FRAGEN.md).
 
 ## Im Repository arbeiten
 
