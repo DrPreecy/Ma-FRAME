@@ -22,6 +22,14 @@ Diese Roadmap übernimmt die Phasennamen des ITP. Jedes Paket ist auf eine Arbei
 | WP-VII-01 | VII – Systemübergreifende Framework-Logik & Philosophie | Modell für Leitstrahl, Räume und dynamisches Routing | Querschnittsregeln sind von Phasenschritten unterscheidbar; GUFP/Save State geklärt (OF-003/009/014). |
 | WP-X-01 | Quellen-/Versionsabgleich | Versionschronologie und Belegliste | Widerspruch zu IV–VI/Platzhaltern und Statusbehauptungen ist mit Autorfreigabe eingeordnet (OF-012). |
 | WP-X-02 | Validierungsdesign | Kleiner, ethischer Praxistest- und Feedbackplan | Prozessreflexion, externe Gegenprobe und Wirksamkeitsnachweis sind klar getrennt (OF-013). |
+| WP-X-03 | Deep-Research-Aufarbeitung | Unveränderte Quellen, nachvollziehbare Einordnung und vorläufige Antworten zu relevanten offenen Fragen | Recherchevorschläge sind von bestätigten Regeln getrennt; unbelegte Behauptungen sind markiert; offene Autorentscheidungen bleiben offen. |
+
+## Arbeitsplan für Issue #8
+
+1. Beide bereitgestellten Dateien unverändert unter `docs/00_quellen/` sichern.
+2. Die Deep-Research-Aussagen und ihre Grenzen in einer separaten Analyse einordnen; keine Analogie als Wirksamkeitsnachweis behandeln.
+3. Relevante offene Fragen mit vorläufigen, rückverfolgbaren Vorschlägen ergänzen und nicht durch Recherche allein schließen.
+4. Sprachregel und Ablage persönlicher deutscher Notizen festhalten; anschließend Repository-Prüfungen ausführen.
 
 ## Nächste drei Aktionen
 
