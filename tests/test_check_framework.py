@@ -92,6 +92,64 @@ class FrameworkStructureTests(unittest.TestCase):
 
         self.assertTrue(any("fehlender Abschnitt '## Zweck'" in error for error in errors))
 
+    def test_marker_outside_phase_must_reference_backlog_row(self) -> None:
+        overview = self.root / "docs/10_framework/00_ueberblick.md"
+        overview.write_text(
+            overview.read_text(encoding="utf-8") + "\n[OFFEN: OF-999]\n",
+            encoding="utf-8",
+        )
+        backlog = self.root / "docs/30_arbeitsstand/OFFENE_FRAGEN.md"
+        backlog.write_text(
+            backlog.read_text(encoding="utf-8") + "\nOF-999 nur im Fließtext.\n",
+            encoding="utf-8",
+        )
+
+        errors = validate(self.root)
+
+        self.assertTrue(any("OF-999 fehlt" in error for error in errors))
+
+    def test_marker_must_not_reference_closed_question(self) -> None:
+        overview = self.root / "docs/10_framework/00_ueberblick.md"
+        overview.write_text(
+            overview.read_text(encoding="utf-8") + "\n[OFFEN: OF-999]\n",
+            encoding="utf-8",
+        )
+        backlog = self.root / "docs/30_arbeitsstand/OFFENE_FRAGEN.md"
+        backlog.write_text(
+            backlog.read_text(encoding="utf-8")
+            + "\n| OF-999 | Erledigt | I | Geschlossen | Ergebnis |\n",
+            encoding="utf-8",
+        )
+
+        errors = validate(self.root)
+
+        self.assertTrue(any("OF-999 ist geschlossen" in error for error in errors))
+
+    def test_duplicate_backlog_id_is_reported(self) -> None:
+        backlog = self.root / "docs/30_arbeitsstand/OFFENE_FRAGEN.md"
+        content = backlog.read_text(encoding="utf-8")
+        backlog.write_text(
+            content.replace(
+                "\n## Geschlossene Fragen",
+                "\n| OF-001 | Duplikat | I | Offen | Prüfen |\n"
+                "\n## Geschlossene Fragen",
+            ),
+            encoding="utf-8",
+        )
+
+        errors = validate(self.root)
+
+        self.assertTrue(any("OF-001 ist mehrfach eingetragen" in error for error in errors))
+
+    def test_marker_example_in_code_is_ignored(self) -> None:
+        overview = self.root / "docs/10_framework/00_ueberblick.md"
+        overview.write_text(
+            overview.read_text(encoding="utf-8") + "\n`[OFFEN: OF-999]`\n",
+            encoding="utf-8",
+        )
+
+        self.assertEqual(validate(self.root), [])
+
 
 if __name__ == "__main__":
     unittest.main()

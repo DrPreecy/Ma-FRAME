@@ -39,8 +39,45 @@ REQUIRED_FILES = (
 VALID_STATUSES = {"Entwurf", "In Arbeit", "Stabil"}
 MARKER_START = re.compile(r"\[OFFEN:")
 MARKER = re.compile(r"\[OFFEN:\s*(OF-\d{3})\b[^\]]*\]")
-QUESTION_ID = re.compile(r"\bOF-\d{3}\b")
 STATUS = re.compile(r"^Status:\s*(.*?)\s*$", re.MULTILINE)
+BACKLOG_ROW = re.compile(r"^\|\s*(OF-\d{3})\s*\|", re.MULTILINE)
+CLOSED_HEADING = "\n## Geschlossene Fragen"
+CODE = re.compile(r"```.*?```|`[^`\n]*`", re.DOTALL)
+MARKER_SCAN_DIRS = (
+    "docs/10_framework",
+    "docs/20_entscheidungen",
+    "docs/30_arbeitsstand",
+)
+MARKER_SCAN_FILES = (
+    "README.md",
+    "docs/00_quellen/QUELLENANALYSE.md",
+)
+
+
+def backlog_ids(content: str) -> tuple[set[str], set[str], list[str]]:
+    open_part, _, closed_part = content.partition(CLOSED_HEADING)
+    open_ids = BACKLOG_ROW.findall(open_part)
+    closed_ids = BACKLOG_ROW.findall(closed_part)
+    all_ids = open_ids + closed_ids
+    duplicates = sorted(
+        question_id
+        for question_id in set(all_ids)
+        if all_ids.count(question_id) > 1
+    )
+    return set(open_ids), set(closed_ids), duplicates
+
+
+def marker_files(root: Path) -> list[Path]:
+    files = [
+        path
+        for directory in MARKER_SCAN_DIRS
+        for path in sorted((root / directory).rglob("*.md"))
+    ]
+    return files + [
+        root / relative_path
+        for relative_path in MARKER_SCAN_FILES
+        if (root / relative_path).is_file()
+    ]
 
 
 def validate(root: Path) -> list[str]:
@@ -72,11 +109,6 @@ def validate(root: Path) -> list[str]:
             errors.append(f"{path}: erforderliche Repository-Datei fehlt")
 
     questions_path = root / "docs/30_arbeitsstand/OFFENE_FRAGEN.md"
-    question_ids = (
-        set(QUESTION_ID.findall(questions_path.read_text(encoding="utf-8")))
-        if questions_path.is_file()
-        else None
-    )
 
     for component in components:
         content = component.read_text(encoding="utf-8")
@@ -92,17 +124,33 @@ def validate(root: Path) -> list[str]:
                 f"({', '.join(sorted(VALID_STATUSES))}; gefunden: {rendered})"
             )
 
-        markers = MARKER.findall(content)
-        if len(MARKER_START.findall(content)) != len(markers):
+    if questions_path.is_file():
+        open_ids, closed_ids, duplicates = backlog_ids(
+            questions_path.read_text(encoding="utf-8")
+        )
+        for question_id in duplicates:
             errors.append(
-                f"{component}: jeder [OFFEN: ...]-Marker muss geschlossen sein "
-                "und eine OF-nnn-ID enthalten"
+                f"{questions_path}: {question_id} ist mehrfach eingetragen"
             )
-        if question_ids is not None:
-            for question_id in sorted(set(markers) - question_ids):
+
+        for path in marker_files(root):
+            content = CODE.sub("", path.read_text(encoding="utf-8"))
+            markers = MARKER.findall(content)
+            if len(MARKER_START.findall(content)) != len(markers):
                 errors.append(
-                    f"{component}: {question_id} fehlt in {questions_path}"
+                    f"{path}: jeder [OFFEN: ...]-Marker muss geschlossen sein "
+                    "und eine OF-nnn-ID enthalten"
                 )
+            for question_id in sorted(set(markers) - open_ids):
+                if question_id in closed_ids:
+                    errors.append(
+                        f"{path}: {question_id} ist geschlossen; Marker entfernen "
+                        "oder Frage wieder öffnen"
+                    )
+                else:
+                    errors.append(
+                        f"{path}: {question_id} fehlt in {questions_path}"
+                    )
 
     return errors
 
