@@ -1,0 +1,48 @@
+name: Offene Framework-Frage
+description: Eine klar abgegrenzte Frage zur Ma-FRAME-Logik dokumentieren.
+title: "[Offene Frage] "
+labels:
+  - offene-frage
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - "I – Ideen Entwerfung"
+        - "II – Ideen Entwicklung"
+        - "III – Idee zu Produktion"
+        - "IV – Produktion"
+        - "V – Launch / After Launch"
+        - "VI – Execution Regeln"
+        - "VII – Systemübergreifende Framework-Logik & Philosophie"
+        - Quellen-/Versionsabgleich
+    validations:
+      required: true
+  - type: input
+    id: question-id
+    attributes:
+      label: OF-ID
+      description: Bestehende ID verwenden oder beim Eintrag in OFFENE_FRAGEN.md eine neue vergeben.
+      placeholder: OF-001
+  - type: textarea
+    id: question
+    attributes:
+      label: Präzise Frage
+      description: Eine entscheidbare Frage, ohne die Antwort vorwegzunehmen.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Quellen und widersprüchliche Hinweise
+      description: Dokument, Abschnitt, Zitat oder betroffene Bausteine.
+    validations:
+      required: true
+  - type: textarea
+    id: next-step
+    attributes:
+      label: Kleinster nächster Klärungsschritt
+      description: Was würde diese Frage in einer einzelnen Sitzung voranbringen?
+    validations:
+      required: true

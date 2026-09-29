@@ -1,0 +1,41 @@
+name: Framework-Review
+description: Einen bestehenden Framework-Entwurf strukturiert prüfen.
+title: "[Review] "
+labels:
+  - review
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - "I – Ideen Entwerfung"
+        - "II – Ideen Entwicklung"
+        - "III – Idee zu Produktion"
+        - "IV – Produktion"
+        - "V – Launch / After Launch"
+        - "VI – Execution Regeln"
+        - "VII – Systemübergreifende Framework-Logik & Philosophie"
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Prüfgegenstand
+      description: Baustein, ADR, PR oder konkrete Frage.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Review-Kriterien
+      description: Quellenbindung, Nutzerhoheit, Rückverfolgbarkeit, Abgrenzung und Abhängigkeiten.
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: Beobachtungen und offene Punkte
+      description: Befunde mit Beleg; offene Fragen mit OF-ID.
+    validations:
+      required: true
