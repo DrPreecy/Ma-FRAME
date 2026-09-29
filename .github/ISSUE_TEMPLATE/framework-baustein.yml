@@ -1,0 +1,50 @@
+name: Framework-Baustein entwickeln oder überarbeiten
+description: Einen Baustein einer Ma-FRAME-Phase gezielt ausarbeiten.
+title: "[Baustein] "
+labels:
+  - baustein
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      description: ITP-Phase, zu der dieser Baustein gehört.
+      options:
+        - "I – Ideen Entwerfung"
+        - "II – Ideen Entwicklung"
+        - "III – Idee zu Produktion"
+        - "IV – Produktion"
+        - "V – Launch / After Launch"
+        - "VI – Execution Regeln"
+        - "VII – Systemübergreifende Framework-Logik & Philosophie"
+    validations:
+      required: true
+  - type: input
+    id: component
+    attributes:
+      label: Baustein
+      description: Name und Link zur aktuellen Spezifikation.
+      placeholder: z. B. Guided thought extracting
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Gewünschtes Sitzungsergebnis
+      description: Ein konkretes Ergebnis, das in einer Arbeitssitzung erreichbar ist.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Quellen und Ausgangsstand
+      description: Belege, relevante OF-IDs und bestehende Entscheidungen.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Abgrenzung und Auswirkungen
+      description: Was gehört nicht dazu und welche abhängigen Bausteine sind betroffen?
+    validations:
+      required: true
