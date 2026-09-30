@@ -97,7 +97,7 @@ def validate(root: Path) -> list[str]:
     expected_phase_paths = {framework / name for name in EXPECTED_PHASES}
     unexpected_phases = sorted(
         phase
-        for phase in framework.glob("[0-9][0-9]_*")
+        for phase in framework.glob("*")
         if phase.is_dir() and phase not in expected_phase_paths
     )
     for phase in unexpected_phases:
