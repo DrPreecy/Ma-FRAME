@@ -31,4 +31,4 @@ VI und VII sind im Quellenmaterial als Phasen nummeriert, wirken aber als Quersc
 
 ## Entwicklungsstand
 
-Phase I.1 „Offload your Context“ wird von Autoren- und KI-Bericht als abgeschlossen bezeichnet. Der nächste beschriebene Schritt ist I.2 „Guided thought extracting“. Die folgenden Kapitel sind quellenbasierte Entwürfe unterschiedlicher Tiefe, kein Nachweis der praktischen Wirksamkeit.
+Der in Autoren- und KI-Bericht dokumentierte Durchlauf von Schritt I.1 „Offload your Context“ wird dort als abgeschlossen bezeichnet. Seine Spezifikation ist als Erfassungs- und Übergabeprozess stabilisiert; damit sind weder das Ideen-Produktprofil noch Phase I abgeschlossen. Der nächste beschriebene Schritt ist I.2 „Guided thought extracting“. Die folgenden Kapitel haben unterschiedliche Reifegrade und sind kein Nachweis der praktischen Wirksamkeit.
