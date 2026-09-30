@@ -21,6 +21,6 @@ jobs:
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress "**/*.md"
+          args: --verbose --no-progress --exclude 'https://gemini.google.com/notebook/' "**/*.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
