@@ -1,6 +1,11 @@
-.PHONY: check extract
+.PHONY: check test validate extract
 
-check:
+check: test validate
+
+test:
+	python3 -m unittest discover -s tests
+
+validate:
 	python3 tools/check_framework.py
 
 extract:

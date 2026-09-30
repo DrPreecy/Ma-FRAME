@@ -10,6 +10,11 @@ Diese Richtlinien halten die Arbeit quellengebunden, nutzergeführt und überpr�
 4. **Abgleichen:** Schutzregeln, Abgrenzungen, Beispiele und Abhängigkeiten betroffener Bausteine prüfen. Neue oder geschlossene Fragen im Fragen-Backlog nachführen.
 5. **Prüfen und sichern:** `make check` ausführen, den Pull-Request-Umfang prüfen und den Stand als Änderung nachvollziehbar sichern.
 
+Bei agentengestützter Arbeit erstellt ein theorieorientierter Agent zuerst eine
+geschlossene [`Agenten-Übergabe`](docs/40_vorlagen/agenten-uebergabe.md). Der
+ausführende Agent setzt nur diesen Auftrag um und eskaliert bei den dort
+festgelegten Stoppkriterien.
+
 ## Definition of Done
 
 - Phase, Baustein und gewünschtes Ergebnis sind im PR benannt.
