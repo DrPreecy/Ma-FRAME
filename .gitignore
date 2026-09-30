@@ -9,3 +9,6 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+
+# Private, local-only working notes
+.local/

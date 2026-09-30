@@ -2,11 +2,13 @@
 
 ## Material und Vorgehen
 
-Die drei Originaldateien liegen im Repository-Root und bleiben unverändert. Die Markdown-Dateien in diesem Verzeichnis sind Text-Extraktionen für Suche, Zitierung und Review; sie sind keine Ersatzfassungen der formatierten DOCX-Dateien. Die Extraktion erhält den Text in Dokumentreihenfolge und stellt erkannte Überschriften, Absätze und Tabellen als Markdown dar. Formatierung, eingebettete Medien und mögliche Word-spezifische Semantik sind damit nicht vollständig abgebildet.
+Die drei ursprünglichen DOCX-Dateien liegen im Repository-Root und bleiben unverändert. Die am 29.09.2026 bereitgestellten Markdown- und PDF-Quellen liegen ebenfalls unverändert in diesem Verzeichnis. Die Markdown-Extraktionen der DOCX-Dateien dienen Suche, Zitierung und Review; sie sind keine Ersatzfassungen der formatierten Originale. Die Extraktion erhält den Text in Dokumentreihenfolge und stellt erkannte Überschriften, Absätze und Tabellen als Markdown dar. Formatierung, eingebettete Medien und mögliche Word-spezifische Semantik sind damit nicht vollständig abgebildet.
 
 - [Autorenbericht](autorenbericht.md): subjektive Prozessdokumentation und Reflexion der Phase I.1.
 - [ITP](itp.md): Beschreibung des Kernablaufs und der Phasen I–VII; ausdrücklich als Vision ohne Realitätsabgleich/Recherchen bezeichnet.
 - [KI-Tätigkeitsbericht](ki-taetigkeitsbericht.md): Dokumentation der KI-Rolle und rückblickende methodische Synthese.
+- [Marlons Framework, Export vom 29.09.2026](Marlons_Framework_zur_Innovationsentwicklung_2026-09-29.md): unveränderter Gesprächsexport mit Entwürfen und Gemini-Rückmeldungen; kein freigegebener Ersatz für ITP oder Framework-Spezifikation.
+- [Architektonische Kartierung des Operator-Paradigmas](Architektonische.Kartierung.und.Systemumfeld.des.Operator-Paradigmas.pdf): bereitgestellter Gemini-Deep-Research-Bericht; die Einordnung und vorläufigen Antworten stehen in der [Analyse](gemini-deep-research-analyse.md).
 
 ## Was Ma-FRAME nach den Quellen ist
 
@@ -62,3 +64,5 @@ Die Punkte werden mit IDs und Bearbeitungsstatus im [Fragen-Backlog](../30_arbei
 ## Treue zur Quelle und Interpretationsgrenzen
 
 Die XML-Prüfung der drei Quelldateien fand keine Word-Tabellen oder ausgewiesenen Überschriftenstile; das ITP nutzt einen Listenabsatz-Stil. Die Extraktionen bewahren die lesbaren Textinhalte in Dokumentreihenfolge, aber nicht Typografie, Einrückung oder die vollständige visuelle Hierarchie. Zeilenabschließende Leerzeichen werden als Markdown-Formatierung normalisiert. Orthografie, Grammatik, Wiederholungen, wertende Aussagen, Formeln und Metaphern werden nicht redaktionell bereinigt. Die Spezifikation unter `docs/10_framework/` ist dagegen eine strukturierte Synthese: Wo sie über den belegten Wortlaut hinausgeht, markiert sie Ableitungen bzw. `[OFFEN: OF-nnn]`. Keine offene Frage in diesem Entwurf gilt als vom Autor entschieden.
+
+Der Gemini-Deep-Research-Bericht ist eine sekundäre Recherchequelle und kein Beleg für die Wirksamkeit des Frameworks. Seine Analogien können Entwurfsoptionen anregen, entscheiden aber keine offenen Autorfragen. Die im Bericht genannten Kennzahlen und Quellenverweise sind in dieser Repository-Aufarbeitung nicht unabhängig geprüft; vor einer Verwendung als Tatsachenbeleg ist eine separate Quellenprüfung erforderlich.
