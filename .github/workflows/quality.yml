@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate framework structure
-        run: python3 tools/check_framework.py
+      - name: Test and validate framework structure
+        run: make check
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:

@@ -16,6 +16,11 @@ Diese Richtlinien halten die Arbeit quellengebunden, nutzergeführt und überpr�
 - Quelldokumente bleiben in ihrer Originalsprache. Framework-Dokumentation darf Deutsch oder Englisch verwenden, wenn dies der Quelle, etablierten Projektbegriffen oder dem vorgesehenen Publikum dient.
 - Persönliche, lokale Arbeitsnotizen dürfen auf Deutsch verfasst werden, gehören aber ausschließlich in `.local/`, das Git ignoriert. Persönliche Notizen nicht in geteilte Repository-Dateien übernehmen.
 
+Bei agentengestützter Arbeit erstellt ein theorieorientierter Agent zuerst eine
+geschlossene [`Agenten-Übergabe`](docs/40_vorlagen/agenten-uebergabe.md). Der
+ausführende Agent setzt nur diesen Auftrag um und eskaliert bei den dort
+festgelegten Stoppkriterien.
+
 ## Definition of Done
 
 - Phase, Baustein und gewünschtes Ergebnis sind im PR benannt.
